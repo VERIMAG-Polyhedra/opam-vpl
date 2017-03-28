@@ -1,4 +1,4 @@
-packages/vpl-core/opam f7f81dc0c72ab8858fff8d1d531edb01 0o644
-packages/vpl-core/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o644
-packages/vpl-core/descr 2660ee5b8b6a61906266f148a8aaa996 0o644
-packages/vpl-core/url c0330a844c91a19c01c1600e2f4b6880 0o644
+packages/vpl-core/url c0330a844c91a19c01c1600e2f4b6880 0o664
+packages/vpl-core/opam f7f81dc0c72ab8858fff8d1d531edb01 0o664
+packages/vpl-core/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
+packages/vpl-core/descr 2660ee5b8b6a61906266f148a8aaa996 0o664
