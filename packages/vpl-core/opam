@@ -1,0 +1,34 @@
+opam-version: "1.2"
+name: "Verified Polyhedra Library"
+version: "0.2"
+maintainer: "Alexandre Maréchal <Alex.Marechal@univ-grenoble-alpes.fr>"
+authors: [ "Sylvain Boulmé <Sylvain.Boulme@univ-grenoble-alpes.fr>"
+           "Alexis Fouilhé <a@Alexis-Fouilhe.fr>"
+           "Alexandre Maréchal <Alex.Marechal@univ-grenoble-alpes.fr>"
+           "David Monniaux <David.Monniaux@univ-grenoble-alpes.fr>"
+           "Michaël Périn <Michael.Perin@univ-grenoble-alpes.fr>"
+           "Hang Yu <Hang.Yu@univ-grenoble-alpes.fr>" ]
+license: "LGPL"
+homepage: "https://github.com/VERIMAG-Polyhedra/VPL"
+dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
+bug-reports: "https://github.com/VERIMAG-Polyhedra/VPL/issues"
+tags: [ "clib:stdc" "clib:m" "clib:gomp" "clib:gmpxx" "clib:gmp" "clib:glpk"  ]
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: ["ocaml" "setup.ml" "-install"]
+remove: [
+  ["ocamlfind" "remove" "vpl"]
+]
+build-test: [
+  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-test"]
+]
+depends: [
+  "base-unix"
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
+  "zarith"
+]
