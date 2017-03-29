@@ -14,14 +14,11 @@ license: "LGPL"
 tags: ["clib:stdc" "clib:m" "clib:gomp" "clib:gmpxx" "clib:gmp" "clib:glpk"]
 dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
 build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
-  ["ocaml" "setup.ml" "-build"]
+  ["make" "vpl" ]
 ]
-install: ["ocaml" "setup.ml" "-install"]
+install: ["make" "install"]
 build-test: [
-  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
-  ["ocaml" "setup.ml" "-build"]
-  ["ocaml" "setup.ml" "-test"]
+  ["make" "check"]
 ]
 remove: ["ocamlfind" "remove" "vpl"]
 depends: [
