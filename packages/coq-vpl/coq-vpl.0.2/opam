@@ -1,0 +1,19 @@
+opam-version: "1.2"
+maintainer: "Sylvain Boulmé <Sylvain.Boulme@univ-grenoble-alpes.fr>"
+authors: [
+  "Sylvain Boulmé <Sylvain.Boulme@univ-grenoble-alpes.fr>"
+  "Alexis Fouilhé <a@Alexis-Fouilhe.fr>"
+  "Alexandre Maréchal <Alex.Marechal@univ-grenoble-alpes.fr>"
+]
+homepage: "https://github.com/VERIMAG-Polyhedra/VPL"
+bug-reports: "https://github.com/VERIMAG-Polyhedra/VPL/issues"
+license: "LGPL"
+tags: ["clib:stdc" "clib:m" "clib:gomp" "clib:gmpxx" "clib:gmp" "clib:glpk"]
+dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
+build: ["make" "coq_build"]
+install: ["make" "coq_install"]
+remove: ["rm" "-R" "%{lib}%/coq/user-contrib/Vpl"]
+depends: [
+  "coq" {>= "8.6" & < "8.7~"}
+  "vpl-core" {>= "0.2" & < "0.3~"}
+]
