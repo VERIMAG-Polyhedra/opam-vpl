@@ -2,7 +2,7 @@
 
 First, add the following repository in your opam system:
 
-    opam repo add vpl https://github.com/VERIMAG-Polyhedra/opam-vpl
+    opam repo add vpl http://www-verimag.imag.fr/~boulme/opam-vpl
 
 Then, install only one of the following package (depending on your needs):
 
