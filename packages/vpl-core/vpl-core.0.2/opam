@@ -14,6 +14,7 @@ license: "LGPL"
 tags: ["clib:stdc" "clib:m" "clib:gomp" "clib:gmpxx" "clib:gmp" "clib:glpk"]
 dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
 build: [
+  ["make" "init"]
   ["make" "vpl" ]
 ]
 install: ["make" "install"]
