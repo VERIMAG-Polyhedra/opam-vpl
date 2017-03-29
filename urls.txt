@@ -1,4 +1,4 @@
 packages/vpl-core/vpl-core.0.2/url 7b4afd47ee564fc96a35e3f843825b76 0o664
-packages/vpl-core/vpl-core.0.2/opam 0fe1973912aaa8185279803cea082809 0o664
+packages/vpl-core/vpl-core.0.2/opam 10d42c077d7ad899b42994d4cbd0cb34 0o664
 packages/vpl-core/vpl-core.0.2/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.2/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
