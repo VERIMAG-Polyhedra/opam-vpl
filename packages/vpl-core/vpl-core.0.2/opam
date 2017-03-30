@@ -13,13 +13,9 @@ bug-reports: "https://github.com/VERIMAG-Polyhedra/VPL/issues"
 license: "LGPL"
 tags: ["clib:stdc" "clib:m" "clib:gomp" "clib:gmpxx" "clib:gmp" "clib:glpk"]
 dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
-build: [
-  ["make" "vpl" ]
-]
+build: ["make" "vpl"]
 install: ["make" "install"]
-build-test: [
-  ["make" "check"]
-]
+build-test: ["make" "check"]
 remove: ["ocamlfind" "remove" "vpl"]
 depends: [
   "base-unix"
@@ -28,6 +24,7 @@ depends: [
   "zarith"
 ]
 depexts: [
+  [["darwin"] ["eigen" "glpk"]]
   [["debian"] ["libeigen3-dev"]]
   [["ubuntu"] ["libeigen3-dev"]]
 ]
