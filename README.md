@@ -4,7 +4,7 @@ First, add the following repository in your opam system:
 
     opam repo add vpl http://www-verimag.imag.fr/~boulme/opam-vpl
 
-Then, install only one of the following package (depending on your needs):
+Then, install the following packages (depending on your needs):
 
 * `vpl-core`: the ocaml library
 
@@ -12,13 +12,13 @@ Then, install only one of the following package (depending on your needs):
     opam install vpl-core
     ```
      
-* `coq-vpl`: the coq library (also install `vpl-core`)
+* `coq-vpl`: the coq library
 
     ```
     opam install coq-vpl
     ```
 
-* `coq-vpltactic`: the coq plugin (also install `coq-vpl`)
+* `coq-vpltactic`: the coq plugin (also install `coq-vpl` and `vpl-core`)
 
     ```
     opam install coq-vpltactic
