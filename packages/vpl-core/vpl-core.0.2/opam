@@ -21,8 +21,7 @@ depends: [
   "base-unix"
   "ocamlbuild" {build}
   "ocamlfind" {build}
-  "zarith"
-  "glpk"
+  "gmp"
 ]
 depexts: [
   [["darwin"] ["eigen"]]
