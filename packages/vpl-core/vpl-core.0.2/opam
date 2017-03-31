@@ -22,6 +22,10 @@ depends: [
   "ocamlbuild" {build}
   "ocamlfind" {build}
   "zarith"
-  "eigen3"
+  "eigen"
   "glpk"
+]
+depexts: [
+  [["debian"] ["libeigen3-dev"]]
+  [["ubuntu"] ["libeigen3-dev"]]
 ]
