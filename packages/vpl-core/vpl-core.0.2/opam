@@ -24,8 +24,7 @@ depends: [
   "zarith"
 ]
 depexts: [
-  [["darwin"] ["eigen"]]
   [["debian"] ["libeigen3-dev"]]
-  [["osx"] ["eigen"]]
+  [["osx"] ["eigen" "glpk"]]
   [["ubuntu"] ["libeigen3-dev"]]
 ]
