@@ -21,10 +21,11 @@ depends: [
   "base-unix"
   "ocamlbuild" {build}
   "ocamlfind" {build}
-  "gmp"
+  "zarith"
 ]
 depexts: [
   [["darwin"] ["eigen"]]
   [["debian"] ["libeigen3-dev"]]
+  [["osx"] ["eigen"]]
   [["ubuntu"] ["libeigen3-dev"]]
 ]
