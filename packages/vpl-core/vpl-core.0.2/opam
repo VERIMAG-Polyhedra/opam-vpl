@@ -22,6 +22,6 @@ depends: [
   "ocamlbuild" {build}
   "ocamlfind" {build}
   "zarith"
-  "eigen"
+  "eigen3"
   "glpk"
 ]
