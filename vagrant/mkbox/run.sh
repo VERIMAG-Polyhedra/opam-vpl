@@ -5,7 +5,7 @@ set -e # abort on error.
 
 # ensures that I run in my directory
 myselfdir="$(dirname $0)"
-cd "$(myselfdir)"
+cd "${myselfdir}"
 
 # vagrant init ubuntu/xenial64
 vagrant up --provider virtualbox
@@ -56,7 +56,7 @@ EOF
 
 # VARIOUS TESTS
 
-vagrant ssh <<EOF
+vagrant ssh -- -X <<EOF
 set -e
 
 cp /vagrant/test.v .
