@@ -39,7 +39,7 @@ opam install -y coq
 opam install -y coq-vpltactic
 # END OPAM INSTALL
 
-# START TEST COQ VPLTACTIC
+# START INSTALL TEST COQ VPLTACTIC
 echo "Require Import VplTactic.Tactic." > ${COQFILE}
 echo "Add Field Qcfield: Qcft (decidable Qc_eq_bool_correct, constants [vpl_cte])." >> ${COQFILE}
 echo "" >> ${COQFILE}
@@ -52,14 +52,12 @@ echo "  vpl_oracle a." >> ${COQFILE}
 echo "  vpl_compute a." >> ${COQFILE}
 echo "  vpl_post." >> ${COQFILE}
 echo "Qed." >> ${COQFILE}
-
-coqc ${COQFILE}
-rm -f test.glob test.vo
-# END TEST COQ VPLTACTIC
+# END INSTALL TEST COQ VPLTACTIC
 
 # START INSTALL coqide
 opam depext -y coqide
 opam install -y coqide
+# END INSTALL coqide
 
 EOF
 
@@ -67,6 +65,8 @@ EOF
 # TEST coqide on the virtualbox
 
 vagrant ssh -- -X <<EOF
+coqc ${COQFILE}
+rm -f test.glob test.vo
 coqide ${COQFILE} 
 EOF
 
