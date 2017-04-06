@@ -6,6 +6,8 @@ set -e # abort on error.
 # vagrant init ubuntu/xenial64
 vagrant up --provider virtualbox
 vagrant ssh <<EOF
+
+# INSTALL SCRIPT on ubuntu/xenial64 box
 set -e
 sudo apt-get update
 sudo locale-gen fr_FR.UTF-8
@@ -50,10 +52,23 @@ echo "  vpl_oracle a." >> ${COQFILE}
 echo "  vpl_compute a." >> ${COQFILE}
 echo "  vpl_post." >> ${COQFILE}
 echo "Qed." >> ${COQFILE}
-coqtop < test.v
+
+coqc ${COQFILE}
+rm -f test.glob test.vo
 # END TEST COQ VPLTACTIC
+
+# START INSTALL coqide
+opam depext -y coqide
+opam install -y coqide
 
 EOF
 
-vagrant package --output vpl.box
-# 
+
+# TEST coqide on the virtualbox
+
+vagrant ssh -- -X <<EOF
+coqide ${COQFILE} 
+EOF
+
+rm -f ../vpl.box
+vagrant package --output ../vpl.box
