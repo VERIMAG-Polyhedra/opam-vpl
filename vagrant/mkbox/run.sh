@@ -14,11 +14,11 @@ sudo locale-gen fr_FR.UTF-8
 sudo apt-get install -y opam m4 libgmp-dev
 
 # START INSTALL GLPK
-sudo apt-get install -y libltdl-dev   # for glpk with --enable-dl
-wget ftp://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
+# sudo apt-get install -y libltdl-dev   # for glpk with --enable-dl
+wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
 tar zxf glpk-4.61.tar.gz
 cd glpk-4.61/
-./configure --with-gmp --enable-dl   # is it needed ?
+./configure --with-gmp # --enable-dl   # is it needed ?
 make
 sudo make install
 cd ..
