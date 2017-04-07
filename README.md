@@ -1,12 +1,14 @@
 # Opam repository for VPL packages
 
-## Installing the [opam](https://opam.ocaml.org/) VPL packages
+## Installing the [opam](https://opam.ocaml.org/) packages of the [VPL](https://github.com/VERIMAG-Polyhedra/VPL)
 
-First, add the following repository in your opam system:
+First, install the [external dependencies](https://github.com/VERIMAG-Polyhedra/VPL/blob/master/README.md#installation) of VPL.
+
+Then, add the following repository in your opam system:
 
     opam repo add vpl http://www-verimag.imag.fr/~boulme/opam-vpl
 
-Then, install the following packages (depending on your needs):
+At last, install the following packages (depending on your needs):
 
 * `vpl-core`: the ocaml library
 
@@ -28,14 +30,15 @@ Then, install the following packages (depending on your needs):
 
 ## Using the [VPL](https://github.com/VERIMAG-Polyhedra/VPL) on a [vagrant](http://www.vagrantup.com/)/[virtualbox](http://www.virtualbox.org/) virtual machine
 
-Installing the libraries required by the [VPL](https://github.com/VERIMAG-Polyhedra/VPL) Library with the appriopriate version might not be easy in your environment. We propose here some alternatives. Alternative 1, try the VPL in a pre-built virtual machine emulating a Ubuntu-64 bits. Alternative 2, the [script](https://github.com/VERIMAG-Polyhedra/opam-vpl/blob/master/vagrant/mkbox/run.sh) that we use to configure this machine, may help you for an opam install on a Ubuntu.
+Installing the libraries required by the [VPL](https://github.com/VERIMAG-Polyhedra/VPL) Library with the appropriate version might not be easy in your environment. We propose here some alternatives. Alternative 1, try the VPL in a pre-built virtual machine emulating a Ubuntu-64 bits. Alternative 2, the [script](https://github.com/VERIMAG-Polyhedra/opam-vpl/blob/master/vagrant/mkbox/run.sh) that we use to configure this machine, may help you for an opam install on a Ubuntu.
 
-For alternative 1, you need to install [vagrant](http://www.vagrantup.com/) with [virtualbox](http://www.virtualbox.org/).
+For alternative 1, you need to have virtualization activated in your BIOS (on linux, you should have a `/dev/kvm` device). 
+Then, you need to install [vagrant](http://www.vagrantup.com/) with [virtualbox](http://www.virtualbox.org/).
 On Ubuntu you may simply run:
 
     sudo apt-get install virtualbox vagrant
  
-Then, in a terminal, run something like:
+Then, create a directory to store the files of the virtual machine and download this [Vagrantfile](http://www-verimag.imag.fr/~boulme/opam-vpl/vagrant/usebox/Vagrantfile) in it. In other words, do something like:
 
     mkdir vagrant_test/
     cd vagrant_test/
@@ -53,7 +56,7 @@ or better, if you have a X server:
 
     vagrant ssh -- -X
 
-In principle, you can do something like:
+In principle, you can now run commands like `ls` in the box (you are here connected as `ubuntu` user):
 
     ubuntu@ubuntu-xenial:~$ ls
     test.v
@@ -64,7 +67,7 @@ on `test.v`, a test file for the [VplTactic](https://github.com/VERIMAG-Polyhedr
 
     coqide test.v &
 
-Just type `exit` to quit the ssh connection, and halt or suspend the machine through `vagrant halt` or  `vagrant suspend` 
+Just type `exit` to quit the ssh connection, and halt or suspend the machine by `vagrant halt` or  `vagrant suspend` 
 (see [vagrant doc](https://www.vagrantup.com/docs/cli) for details). In order to clean the box, run
 
     vagrant destroy -f          # remove your version of the box 
