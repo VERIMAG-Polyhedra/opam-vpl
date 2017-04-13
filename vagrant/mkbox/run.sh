@@ -1,7 +1,11 @@
 #!/bin/bash
 
-COQFILE=test.v
+
 set -e # abort on error.
+
+# ensures that I run in my directory
+myselfdir="$(dirname $0)"
+cd "${myselfdir}"
 
 # vagrant init ubuntu/xenial64
 vagrant up --provider virtualbox
@@ -26,7 +30,7 @@ sudo ldconfig
 rm -rf glpk-4.61*
 # END INSTALL GLPK
 
-# START OPAM INSTALL
+# START OPAM INSTALL vpl-core
 opam init -a
 opam config env
 opam install -y depext
@@ -35,24 +39,12 @@ opam install -y zarith
 opam repo add vpl http://www-verimag.imag.fr/~boulme/opam-vpl
 opam depext -y vpl-core
 opam install -y vpl-core
+# END OPAM INSTALL vpl-core
+
+# START INSTALL coq-vpltactic
 opam install -y coq
 opam install -y coq-vpltactic
-# END OPAM INSTALL
-
-# START INSTALL TEST COQ VPLTACTIC
-echo "Require Import VplTactic.Tactic." > ${COQFILE}
-echo "Add Field Qcfield: Qcft (decidable Qc_eq_bool_correct, constants [vpl_cte])." >> ${COQFILE}
-echo "" >> ${COQFILE}
-echo "Lemma ex_intro (x: Qc) (f: Qc -> Qc):" >> ${COQFILE}
-echo "  x <= 1" >> ${COQFILE}
-echo "  -> (f x) < (f 1)"  >> ${COQFILE}
-echo "  -> x < 1." >> ${COQFILE}
-echo "Proof." >> ${COQFILE}
-echo "  vpl_oracle a." >> ${COQFILE}
-echo "  vpl_compute a." >> ${COQFILE}
-echo "  vpl_post." >> ${COQFILE}
-echo "Qed." >> ${COQFILE}
-# END INSTALL TEST COQ VPLTACTIC
+# END INSTALL coq-vpltactic
 
 # START INSTALL coqide
 opam depext -y coqide
@@ -62,12 +54,19 @@ opam install -y coqide
 EOF
 
 
-# TEST coqide on the virtualbox
+# VARIOUS TESTS
 
 vagrant ssh -- -X <<EOF
-coqc ${COQFILE}
+set -e
+
+cp /vagrant/test.v .
+coqc test.v
 rm -f test.glob test.vo
-coqide ${COQFILE} 
+
+mkdir -p .local
+mkdir -p .local/share
+rm -rf .config
+cp -r /vagrant/coq_config .config
 EOF
 
 rm -f ../vpl.box
