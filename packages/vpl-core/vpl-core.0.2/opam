@@ -22,7 +22,6 @@ depends: [
   "ocamlbuild" {build}
   "ocamlfind" {build}
   "zarith"
-  "oclock"
 ]
 depexts: [
   [["debian"] ["libeigen3-dev"]]
