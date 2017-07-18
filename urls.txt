@@ -1,5 +1,5 @@
 packages/vpl-core/vpl-core.0.2/url c0330a844c91a19c01c1600e2f4b6880 0o664
-packages/vpl-core/vpl-core.0.2/opam 705b15979e03c5e54d9fa91558e52a08 0o664
+packages/vpl-core/vpl-core.0.2/opam c9ab516a130f5fd2e3cea0ef14a8366d 0o664
 packages/vpl-core/vpl-core.0.2/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.2/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/url 153337cc4fffbc5266d7abed64738176 0o664

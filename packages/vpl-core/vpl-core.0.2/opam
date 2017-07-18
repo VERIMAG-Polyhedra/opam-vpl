@@ -27,5 +27,6 @@ depexts: [
   [["debian"] ["libeigen3-dev"]]
   [["osx"] ["eigen" "glpk"]]
   [["ubuntu"] ["libeigen3-dev"]]
+  [["win32"] ["libeigen3-dev"]]
 ]
 available: [ocaml-version >= "4.02.3"]
