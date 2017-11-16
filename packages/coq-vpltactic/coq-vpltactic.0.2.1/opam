@@ -13,6 +13,6 @@ install: ["make" "install"]
 remove: ["rm" "-R" "%{lib}%/coq/user-contrib/VplTactic"]
 depends: [
   "coq" {>= "8.7" & < "8.8~"}
-  "vpl-core" {>= "0.2.1" & < "0.3~"}
+  "vpl-core" {>= "0.2" & < "0.3~"}
   "coq-vpl" {>= "0.2.1" & < "0.2.2~"}
 ]

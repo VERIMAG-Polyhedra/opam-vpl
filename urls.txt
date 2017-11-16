@@ -6,7 +6,7 @@ packages/coq-vpltactic/coq-vpltactic.0.2/url 153337cc4fffbc5266d7abed64738176 0o
 packages/coq-vpltactic/coq-vpltactic.0.2/opam 6e4d96cc57cde1bbdf3fecad24cf5c6a 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2.1/url 033eab1bec789fbf8b6caf2446d4d2bf 0o664
-packages/coq-vpltactic/coq-vpltactic.0.2.1/opam d07899be2fcf9de8d2971d8470fbc37a 0o664
+packages/coq-vpltactic/coq-vpltactic.0.2.1/opam ff71b6f91dda80fb933fd30647791ccb 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2.1/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpl/coq-vpl.0.2/url c0330a844c91a19c01c1600e2f4b6880 0o664
 packages/coq-vpl/coq-vpl.0.2/opam afb4b4bfc9115cf5f0add184909af5f2 0o664
