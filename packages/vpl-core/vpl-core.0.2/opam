@@ -28,4 +28,3 @@ depexts: [
   [["osx"] ["eigen" "glpk"]]
   [["ubuntu"] ["libeigen3-dev"]]
 ]
-available: [ocaml-version >= "4.02.1"]
