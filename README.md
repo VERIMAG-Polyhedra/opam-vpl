@@ -6,7 +6,7 @@ First, install the [external dependencies](https://github.com/VERIMAG-Polyhedra/
 
 Then, add the following repository in your opam system:
 
-    opam repo add vpl http://www-verimag.imag.fr/~boulme/opam-vpl
+    opam repo add vpl https://raw.githubusercontent.com/VERIMAG-Polyhedra/opam-vpl/master
 
 At last, install the following packages (depending on your needs):
 
