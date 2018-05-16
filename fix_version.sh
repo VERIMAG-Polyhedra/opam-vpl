@@ -95,8 +95,8 @@ fi
 if $DRY_RUN
 then
     echo cp -r "packages/vpl-core/vpl-core.$FIXED_VERSION" "packages/vpl-core/vpl-core.$NEXT_VERSION"
-    echo echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' '>' "packages/vpl-core/vpl-core.$FIXED_VERSION"
+    echo echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' '>' "packages/vpl-core/vpl-core.$FIXED_VERSION/url"
 else
     cp -r "packages/vpl-core/vpl-core.$FIXED_VERSION" "packages/vpl-core/vpl-core.$NEXT_VERSION"
-    echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' > "packages/vpl-core/vpl-core.$FIXED_VERSION"
+    echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' > "packages/vpl-core/vpl-core.$FIXED_VERSION/url"
 fi
