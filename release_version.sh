@@ -65,13 +65,13 @@ if $DRY_RUN
 then
     echo "("
     echo cd "$TMP_VPL_CLONE"
-    echo git tag -a "$RELEASED_VERSION" -m "Version $RELEASED_VERSION"
+    echo git tag -a "$RELEASED_VERSION"
     echo git push origin "$RELEASED_VERSION"
     echo ")"
 else
     (
     cd "$TMP_VPL_CLONE"
-    git tag -a "$RELEASED_VERSION" -m "Version $RELEASED_VERSION"
+    git tag -a "$RELEASED_VERSION"
     git push origin "$RELEASED_VERSION"
     )
 fi
