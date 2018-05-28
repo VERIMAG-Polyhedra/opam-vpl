@@ -1,29 +1,24 @@
 #!/usr/bin/env bash
 
-# Use this script when a new version is prepared
+# Use this script when a new version should be released.
 # This script creates a tag for the current master commit of VPL
 # with the given version number (argument) and fixes the opam version
-# to this tag
-
-# A new package for the next version is created and points to the master
-# branch of VPL's git
+# to use this tag.
 
 print_help() {
-    echo "Usage: $1 FIXED_VERSION NEXT_VERSION [-d,--dry-run]"
+    echo "Usage: $1 RELEASED_VERSION [-d,--dry-run]"
     echo
     echo "Option -d (or --dry-run) simply prints the commands on the output"
     echo "instead of executing them"
     echo
 }
 
-if [ $# -lt 2 ]
+if [ $# -lt 1 ]
 then
     print_help "$0"
     exit
 else
-    FIXED_VERSION="$1"
-    shift
-    NEXT_VERSION="$1"
+    RELEASED_VERSION="$1"
     shift
 fi
 
@@ -70,14 +65,14 @@ if $DRY_RUN
 then
     echo "("
     echo cd "$TMP_VPL_CLONE"
-    echo git tag -a "$FIXED_VERSION" -m "Version $FIXED_VERSION"
-    echo git push origin "$FIXED_VERSION"
+    echo git tag -a "$RELEASED_VERSION" -m "Version $RELEASED_VERSION"
+    echo git push origin "$RELEASED_VERSION"
     echo ")"
 else
     (
     cd "$TMP_VPL_CLONE"
-    git tag -a "$FIXED_VERSION" -m "Version $FIXED_VERSION"
-    git push origin "$FIXED_VERSION"
+    git tag -a "$RELEASED_VERSION" -m "Version $RELEASED_VERSION"
+    git push origin "$RELEASED_VERSION"
     )
 fi
 
@@ -94,9 +89,9 @@ fi
 
 if $DRY_RUN
 then
-    echo cp -r "packages/vpl-core/vpl-core.$FIXED_VERSION" "packages/vpl-core/vpl-core.$NEXT_VERSION"
-    echo echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' '>' "packages/vpl-core/vpl-core.$FIXED_VERSION/url"
+    echo cp -r "packages/vpl-core/vpl-core.0.3" "packages/vpl-core/vpl-core.$RELEASED_VERSION"
+    echo echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$RELEASED_VERSION'"' '>' "packages/vpl-core/vpl-core.$RELEASED_VERSION/url"
 else
-    cp -r "packages/vpl-core/vpl-core.$FIXED_VERSION" "packages/vpl-core/vpl-core.$NEXT_VERSION"
-    echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$FIXED_VERSION'"' > "packages/vpl-core/vpl-core.$FIXED_VERSION/url"
+    cp -r "packages/vpl-core/vpl-core.0.3" "packages/vpl-core/vpl-core.$RELEASED_VERSION"
+    echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$RELEASED_VERSION'"' > "packages/vpl-core/vpl-core.$RELEASED_VERSION/url"
 fi
