@@ -59,18 +59,34 @@ else
     git clone "$VPL_URL" "$TMP_VPL_CLONE"
 fi
 
-# Tag the current master
+# Tag the current master (update _oasis files with the new version number)
 
 if $DRY_RUN
 then
     echo "("
     echo cd "$TMP_VPL_CLONE"
+    if [[ "$RELEASED_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]
+    then
+        echo sed -i \'s/Version:.*/Version: $RELEASED_VERSION.0/g\' ocaml/_oasis*
+    else
+        echo sed -i \'s/Version:.*/Version: $RELEASED_VERSION/g\' ocaml/_oasis*
+    fi
+    echo git commit -am '"Update version number to '$RELEASED_VERSION'"'
+    echo git push origin master
     echo git tag -a "$RELEASED_VERSION"
     echo git push origin "$RELEASED_VERSION"
     echo ")"
 else
     (
     cd "$TMP_VPL_CLONE"
+    if [[ "$RELEASED_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]
+    then
+        sed -i "s/Version:.*/Version: $RELEASED_VERSION.0/g" ocaml/_oasis*
+    else
+        sed -i "s/Version:.*/Version: $RELEASED_VERSION/g" ocaml/_oasis*
+    fi
+    git commit -am "Update version number to $RELEASED_VERSION"
+    git push origin master
     git tag -a "$RELEASED_VERSION"
     git push origin "$RELEASED_VERSION"
     )
