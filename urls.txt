@@ -2,6 +2,10 @@ packages/vpl-core/vpl-core.0.3/url 86cdba2bc7799fef2cedf49ead39011a 0o664
 packages/vpl-core/vpl-core.0.3/opam 709edbe12034f343663afcaf720af65e 0o664
 packages/vpl-core/vpl-core.0.3/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.3/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
+packages/vpl-core/vpl-core.0.3.1/url b0060980b073fc55223474adec8e767a 0o664
+packages/vpl-core/vpl-core.0.3.1/opam d4d67ee8a3c2834d169ecec758a03995 0o664
+packages/vpl-core/vpl-core.0.3.1/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
+packages/vpl-core/vpl-core.0.3.1/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
 packages/vpl-core/vpl-core.0.2/url b487f805c0ecbb8af8af970b4e3f9c7a 0o664
 packages/vpl-core/vpl-core.0.2/opam 968cf3aa9d75e8db68a02e23d5b2b23d 0o664
 packages/vpl-core/vpl-core.0.2/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
