@@ -23,4 +23,4 @@ depends: [
   "zarith"
   "oasis" {build}
 ]
-available: [ocaml-version >= "4.02.1" & ocaml-version < "4.06~"]
+available: [ocaml-version >= "4.02.1"]
