@@ -1,5 +1,5 @@
 packages/vpl-core/vpl-core.0.4.0/url 93ad0f24e83274c7e1cf166f792a4325 0o664
-packages/vpl-core/vpl-core.0.4.0/opam 220a145841e55ddd56a89f965c3c89fd 0o664
+packages/vpl-core/vpl-core.0.4.0/opam dee270293510caccfac10d9b8656bd8f 0o664
 packages/vpl-core/vpl-core.0.4.0/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.4.0/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
 packages/vpl-core/vpl-core.0.3/url 86cdba2bc7799fef2cedf49ead39011a 0o664
@@ -22,6 +22,9 @@ packages/vpl-core/vpl-core.0.2.1/url 90f468910176ced4dd811a1b33e989ab 0o664
 packages/vpl-core/vpl-core.0.2.1/opam 4af156f51595747f6ddd42c627ee2cab 0o664
 packages/vpl-core/vpl-core.0.2.1/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.2.1/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.0/url 033eab1bec789fbf8b6caf2446d4d2bf 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.0/opam 893b7a71d4ff9bfdd971f3b36b7ab99a 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.0/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/url cf9cd781cb93414a34627e3b4ded75d4 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/opam 6e4d96cc57cde1bbdf3fecad24cf5c6a 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/descr e325b0e39b30053670e741185203ad81 0o664
@@ -29,7 +32,7 @@ packages/coq-vpltactic/coq-vpltactic.0.2.1/url 033eab1bec789fbf8b6caf2446d4d2bf 
 packages/coq-vpltactic/coq-vpltactic.0.2.1/opam 3037608feeb680c7ff3387986e5a2f34 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2.1/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpl/coq-vpl.0.4.0/url 93ad0f24e83274c7e1cf166f792a4325 0o664
-packages/coq-vpl/coq-vpl.0.4.0/opam 509ac838bf498ba6e747feca92cec8ce 0o664
+packages/coq-vpl/coq-vpl.0.4.0/opam 7e8df128030cef598a9e7f2c3f1e15bf 0o664
 packages/coq-vpl/coq-vpl.0.4.0/descr cdcfcb3c3283258b32e1753c365a4581 0o664
 packages/coq-vpl/coq-vpl.0.2/url a89e7ca11bc6a83ef6eea61f023c0e8f 0o664
 packages/coq-vpl/coq-vpl.0.2/opam afb4b4bfc9115cf5f0add184909af5f2 0o664
