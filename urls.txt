@@ -1,3 +1,7 @@
+packages/vpl-core/vpl-core.0.4.0/url 93ad0f24e83274c7e1cf166f792a4325 0o664
+packages/vpl-core/vpl-core.0.4.0/opam 220a145841e55ddd56a89f965c3c89fd 0o664
+packages/vpl-core/vpl-core.0.4.0/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
+packages/vpl-core/vpl-core.0.4.0/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
 packages/vpl-core/vpl-core.0.3/url 86cdba2bc7799fef2cedf49ead39011a 0o664
 packages/vpl-core/vpl-core.0.3/opam 4af156f51595747f6ddd42c627ee2cab 0o664
 packages/vpl-core/vpl-core.0.3/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
