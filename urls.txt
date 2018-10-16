@@ -1,3 +1,7 @@
+packages/vpl-core/vpl-core.0.4.2/url 9d169b9d4561d6d2a30263644cec8a7c 0o664
+packages/vpl-core/vpl-core.0.4.2/opam 220a145841e55ddd56a89f965c3c89fd 0o664
+packages/vpl-core/vpl-core.0.4.2/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
+packages/vpl-core/vpl-core.0.4.2/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
 packages/vpl-core/vpl-core.0.4.1/url fd2218f87b96853cfafb81f5215dd6fa 0o664
 packages/vpl-core/vpl-core.0.4.1/opam e38abaccfd22acf32cd6a4b4ccb957b2 0o664
 packages/vpl-core/vpl-core.0.4.1/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
@@ -26,7 +30,7 @@ packages/vpl-core/vpl-core.0.2.1/url 90f468910176ced4dd811a1b33e989ab 0o664
 packages/vpl-core/vpl-core.0.2.1/opam 4af156f51595747f6ddd42c627ee2cab 0o664
 packages/vpl-core/vpl-core.0.2.1/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.2.1/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
-packages/coq-vpltactic/coq-vpltactic.0.4.0/url 033eab1bec789fbf8b6caf2446d4d2bf 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.0/url 6a0df1a645a9d151e0b282835c63e12d 0o664
 packages/coq-vpltactic/coq-vpltactic.0.4.0/opam f4c999208280d4cf6d811cc222d728de 0o664
 packages/coq-vpltactic/coq-vpltactic.0.4.0/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpltactic/coq-vpltactic.0.2/url cf9cd781cb93414a34627e3b4ded75d4 0o664
