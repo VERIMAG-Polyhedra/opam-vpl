@@ -30,6 +30,9 @@ packages/vpl-core/vpl-core.0.2.1/url 90f468910176ced4dd811a1b33e989ab 0o664
 packages/vpl-core/vpl-core.0.2.1/opam 4af156f51595747f6ddd42c627ee2cab 0o664
 packages/vpl-core/vpl-core.0.2.1/findlib 0612dad79b44bf69c8e6a70e6ffe181a 0o664
 packages/vpl-core/vpl-core.0.2.1/descr 655bf4375650f1717b8dd0047eaae7a4 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.2/url 4e06fddbf7b238dc6725d662ec1ac287 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.2/opam fb553a37fc34a1fee26c18f9e0e5162d 0o664
+packages/coq-vpltactic/coq-vpltactic.0.4.2/descr e325b0e39b30053670e741185203ad81 0o664
 packages/coq-vpltactic/coq-vpltactic.0.4.0/url 6a0df1a645a9d151e0b282835c63e12d 0o664
 packages/coq-vpltactic/coq-vpltactic.0.4.0/opam f4c999208280d4cf6d811cc222d728de 0o664
 packages/coq-vpltactic/coq-vpltactic.0.4.0/descr e325b0e39b30053670e741185203ad81 0o664
