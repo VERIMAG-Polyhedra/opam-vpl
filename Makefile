@@ -1,2 +1,2 @@
 admin:
-	opam-admin make
+	opam admin make
