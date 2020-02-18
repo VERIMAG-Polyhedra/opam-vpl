@@ -1,0 +1,25 @@
+opam-version: "2.0"
+maintainer: "Alexandre Maréchal <Alex.Marechal@univ-grenoble-alpes.fr>"
+authors: [
+  "Sylvain Boulmé <Sylvain.Boulme@univ-grenoble-alpes.fr>"
+  "Alexis Fouilhé <a@Alexis-Fouilhe.fr>"
+  "Alexandre Maréchal <Alex.Marechal@univ-grenoble-alpes.fr>"
+  "David Monniaux <David.Monniaux@univ-grenoble-alpes.fr>"
+  "Michaël Périn <Michael.Perin@univ-grenoble-alpes.fr>"
+  "Hang Yu <Hang.Yu@univ-grenoble-alpes.fr>"
+]
+homepage: "https://github.com/VERIMAG-Polyhedra/VPL"
+bug-reports: "https://github.com/VERIMAG-Polyhedra/VPL/issues"
+license: "LGPL"
+dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
+build: ["make" "vpl"]
+install: ["make" "install"]
+build-test: ["make" "check"]
+remove: ["make uninstall"]
+depends: [
+  "base-unix"
+  "dune" {>= 2.1 & build}
+  "ocamlfind" {build}
+  "zarith"
+]
+available: [ocaml-version >= "4.08.0"]

@@ -65,12 +65,6 @@ if $DRY_RUN
 then
     echo "("
     echo cd "$TMP_VPL_CLONE"
-    if [[ "$RELEASED_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]
-    then
-        echo sed -i \'s/version:.*/version: \"$RELEASED_VERSION.0\"/g\' ocaml/META
-    else
-        echo sed -i \'s/version:.*/version: \"$RELEASED_VERSION\"/g\' ocaml/META
-    fi
     echo git commit -am '"Update version number to '$RELEASED_VERSION'"'
     echo git push origin master
     echo git tag -a "$RELEASED_VERSION"
@@ -79,12 +73,6 @@ then
 else
     (
     cd "$TMP_VPL_CLONE"
-    if [[ "$RELEASED_VERSION" =~ ^[0-9]+\.[0-9]+$ ]]
-    then
-        sed -i "s/version:.*/version: \"$RELEASED_VERSION.0\"/g" ocaml/META
-    else
-        sed -i "s/version:.*/version: \"$RELEASED_VERSION\"/g" ocaml/META
-    fi
     git commit -am "Update version number to $RELEASED_VERSION"
     git push origin master
     git tag -a "$RELEASED_VERSION"
@@ -116,7 +104,7 @@ else
         cp -r "packages/vpl-core/vpl-core.0.4.2" "packages/vpl-core/vpl-core.$RELEASED_VERSION"
         git add "packages/vpl-core/vpl-core.$RELEASED_VERSION"
         echo 'git: "https://github.com/VERIMAG-Polyhedra/vpl#'$RELEASED_VERSION'"' > "packages/vpl-core/vpl-core.$RELEASED_VERSION/url"
-        git commit -am "Update version number to $RELEASED_VERSION"
-        git push
+        #git commit -am "Update version number to $RELEASED_VERSION"
+        #git push
     fi
 fi
