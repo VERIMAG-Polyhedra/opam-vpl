@@ -23,10 +23,10 @@ depends: [
   "ocamlfind" {build}
   "zarith"
   "oasis" {build}
+  "ocaml" {>= "4.02.1" & < "4.06~"}
 ]
 depexts: [
   [["debian"] ["libeigen3-dev"]]
   [["osx"] ["eigen" "glpk"]]
   [["ubuntu"] ["libeigen3-dev"]]
 ]
-available: [ocaml-version >= "4.02.1" & ocaml-version < "4.06~"]

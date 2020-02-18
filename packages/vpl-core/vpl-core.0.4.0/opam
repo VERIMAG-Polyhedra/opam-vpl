@@ -22,5 +22,5 @@ depends: [
   "ocamlfind" {build}
   "zarith"
   "oasis" {build}
+  "ocaml" {>= "4.02.1" & < "4.07~"}
 ]
-available: [ocaml-version >= "4.02.1" & < "4.07~"]
