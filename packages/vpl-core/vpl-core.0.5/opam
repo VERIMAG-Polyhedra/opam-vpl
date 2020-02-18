@@ -18,7 +18,7 @@ build-test: ["make" "check"]
 remove: ["make uninstall"]
 depends: [
   "base-unix"
-  "dune" {>= "2.1" & build}
+  "dune" {build}
   "ocamlfind" {build}
   "zarith"
 ]
