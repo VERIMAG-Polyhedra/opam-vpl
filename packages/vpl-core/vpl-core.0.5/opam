@@ -15,7 +15,7 @@ dev-repo: "https://github.com/VERIMAG-Polyhedra/VPL"
 build: ["make" "vpl"]
 install: ["make" "install"]
 build-test: ["make" "check"]
-remove: ["make uninstall"]
+remove: ["make" "uninstall"]
 depends: [
   "base-unix"
   "dune" {build}
